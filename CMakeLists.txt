@@ -5,3 +5,5 @@ project(finalfusion_cxx)
 enable_testing()
 
 add_subdirectory(finalfusion-ffi)
+add_subdirectory(src)
+add_subdirectory(tests)
