@@ -12,6 +12,8 @@ make test
 
 # If the tests succeed, run them once more to see if there
 # are any memory errors or leaks.
-ctest \
-  --overwrite MemoryCheckCommandOptions="--leak-check=full --error-exitcode=1" \
-  -T memcheck
+if [[ "$TRAVIS_OS_NAME" != "osx" ]] ; then
+    ctest \
+      --overwrite MemoryCheckCommandOptions="--leak-check=full --error-exitcode=1" \
+      -T memcheck
+fi
