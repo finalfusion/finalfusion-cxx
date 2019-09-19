@@ -4,7 +4,7 @@ project(finalfusion_cxx)
 
 enable_testing()
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(finalfusion-ffi)
 add_subdirectory(src)

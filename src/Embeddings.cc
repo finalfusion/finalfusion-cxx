@@ -45,7 +45,7 @@ public:
 };
 
 Embeddings::Embeddings(std::string const &filename, bool mmap)
-    : embeddings_impl_(std::make_unique<EmbeddingsImpl>(filename, mmap)) {}
+    : embeddings_impl_(std::unique_ptr<EmbeddingsImpl>(new EmbeddingsImpl(filename, mmap))) {}
 
 Embeddings::~Embeddings() = default;
 

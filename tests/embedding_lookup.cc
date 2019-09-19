@@ -7,13 +7,13 @@
 int main() {
   std::unique_ptr<Embeddings> embeddings;
   try {
-    embeddings = std::make_unique<Embeddings>("foo", true);
+    embeddings = std::unique_ptr<Embeddings>(new Embeddings("foo", true));
     return 1;
   } catch (std::exception &e) {
   }
 
   try {
-    embeddings = std::make_unique<Embeddings>("data/test.fifu", false);
+    embeddings = std::unique_ptr<Embeddings>(new Embeddings("data/test.fifu", false));
   } catch (std::exception &e) {
     return 1;
   }
