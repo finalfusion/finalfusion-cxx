@@ -13,7 +13,7 @@ int main() {
   }
 
   try {
-    embeddings = std::unique_ptr<Embeddings>(new Embeddings("data/test.fifu", false));
+    embeddings = std::unique_ptr<Embeddings>(new Embeddings("testdata/test.fifu", false));
   } catch (std::exception &e) {
     return 1;
   }
